@@ -1,11 +1,9 @@
-
 $primary: #9356DC; 
 $secondary: #FF79DA;
 $tertiary: #99E2D0;
 $darkgrey: #EAEAEA;
 $lightgrey: #f6f6f6;
 $footer: #353535;
-$green: #99E2D0;
 $greentxt: #008766;
 body {
     width: 100%;
@@ -21,18 +19,27 @@ a {
     text-decoration: none;
     color: black;
 }
+span {
+    font-weight: bold;
+}
 .btn1 {
-    border: transparent; 
+    width: 190px;
+    border: transparent;
+    outline: none;
+    border-radius: 50px; 
     background-color: $primary;
+    padding: 14px 0px 14px 0px;
     color: #fff;
 }
-@media (max-width: 768px)/*smartphone*/ {
+@media (max-width: 767px)/*smartphone*/ {
+/*----------acceuil----------*/ 
     header {
         display: flex;
         justify-content: center;
         margin-top: 20px;
         margin-bottom: 20px;
     }
+/*----------section localisation----------*/ 
     #location {
         display: flex;
         flex-direction: column;
@@ -60,20 +67,14 @@ a {
             text-align: center;
             padding-bottom: 50px;
             background-color: $lightgrey;
-            .btn-exploration {
-                padding: 15px 15px 15px 15px;
-                border-radius: 50px;
-            }
         }  
     }
+/*----------section fonctionnement----------*/
     #operation {
         margin-bottom: 50px;
         article {
             display: flex;
             flex-direction: column;
-            h2 {
-
-            }
             div {
                 display: flex;
                 flex-direction: column;
@@ -108,6 +109,7 @@ a {
             }
         }
     }
+/*----------section restaurants----------*/
     #restaurants {
         article {
             display: flex;
@@ -131,7 +133,7 @@ a {
                         border-radius: 15px 15px 0px 0px;
                     }
                     .new {
-                        background-color: $green;
+                        background-color: $tertiary;
                         color: $greentxt;
                         position: absolute;
                         border-radius: 2px;
@@ -146,13 +148,15 @@ a {
                         margin: 0px 15px 5px 15px;
                         .btn-heart {
                             border: transparent;
+                            outline: none;
                             background-color: transparent;
                         }
                     }
                 }
             }
         }    
-    }        
+    }
+/*----------footer acceuil et menu----------*/        
     footer {
         display: flex;
         flex-direction: column;
@@ -165,5 +169,59 @@ a {
         .fas {
             margin-right: 10px;
         }
-    }          
+    }  
+/*----------menu----------*/
+    .headermenu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+/*----------section----------*/
+    .cards {
+        div {
+            img {
+                width: 100%;
+                object-fit: cover;
+                height: 260px;
+                margin-bottom: -60px;
+            }
+        }
+        article{
+            position: relative;
+            z-index: 100;
+            background-color: $lightgrey;
+            border-radius: 25px 25px 0px 0px;
+            padding-bottom: 60px;
+            .titlemenu {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: baseline;
+            } 
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .tiles {
+                    width: 90%;
+                    background-color: #fff;
+                    box-shadow: 0 0 5px 0.2em #e2e2e2;
+                    border-radius: 15px;
+                    margin-bottom: 20px;
+                    div {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: baseline;         
+                    }
+                }
+            } 
+        }          
+    }    
+}
+@media (min-width: 768px) and (max-width: 1239px)/*tablet-laptop-s-m*/ {
+
+}
+@media (min-width: 1240px) and (max-width: 1680px)/*laptop-l*/ {
+
 }
