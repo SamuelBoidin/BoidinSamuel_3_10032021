@@ -1,0 +1,163 @@
+body {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2 {
+  font-family: "Roboto";
+  font-size: 1.6em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn1 {
+  border: transparent;
+  background-color: #9356DC;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  #location {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  #location form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #EAEAEA;
+    padding: 15px 0px 15px 0px;
+    box-shadow: 0px -3px 2px 0px #cfcfcf;
+  }
+  #location form input {
+    border: transparent;
+    outline: none;
+    background-color: #EAEAEA;
+  }
+  #location form label {
+    padding-right: 10px;
+  }
+  #location article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+    background-color: #f6f6f6;
+  }
+  #location article .btn-exploration {
+    padding: 15px 15px 15px 15px;
+    border-radius: 50px;
+  }
+
+  #operation {
+    margin-bottom: 50px;
+  }
+  #operation article {
+    display: flex;
+    flex-direction: column;
+  }
+  #operation article div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #operation article div div {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    box-shadow: 0 0 13px 0.2em #e2e2e2;
+    margin-bottom: 20px;
+  }
+  #operation article div div .number {
+    background-color: #9356DC;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px 2px 6px;
+    margin-left: -10px;
+  }
+  #operation article div div .fas {
+    color: #7e7e7e;
+  }
+  #operation article div div p {
+    margin-right: 20px;
+  }
+  #operation article div .purple .fas {
+    color: #9356DC;
+  }
+
+  #restaurants article {
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    padding-bottom: 40px;
+  }
+  #restaurants article div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #restaurants article div figure {
+    width: 90%;
+    height: 235px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px 0.2em #e2e2e2;
+    position: relative;
+  }
+  #restaurants article div figure img {
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+  }
+  #restaurants article div figure .new {
+    background-color: #99E2D0;
+    color: #008766;
+    position: absolute;
+    border-radius: 2px;
+    top: 0px;
+    right: 10px;
+    padding: 3px 5px 3px 5px;
+  }
+  #restaurants article div figure figcaption {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 15px 5px 15px;
+  }
+  #restaurants article div figure figcaption .btn-heart {
+    border: transparent;
+    background-color: transparent;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 40px 15px;
+    background-color: #353535;
+    color: #fff;
+  }
+  footer a {
+    color: #fff;
+  }
+  footer .fas {
+    margin-right: 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
