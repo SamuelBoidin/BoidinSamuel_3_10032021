@@ -10,25 +10,35 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    font-family: 'Roboto' , sans-serif , serif;
 }
-h1 , h2 { 
-    font-family: 'Roboto';
-    font-size: 1.6em;
+h1 { 
+    font-family: 'Roboto' , sans-serif , serif;
+    font-size: 1.7em;
+}
+h2 {
+    font-family: 'Roboto' , sans-serif , serif;
+    font-size: 1.3em;
+    margin-left: 15px;
+}
+p , ul {
+    font-size: 0.9em;
 }
 a {
     text-decoration: none;
     color: black;
+    outline: none;
 }
 span {
     font-weight: bold;
 }
 .btn1 {
-    width: 190px;
+    width: 195px;
     border: transparent;
     outline: none;
     border-radius: 50px; 
     background-color: $primary;
-    padding: 14px 0px 14px 0px;
+    padding: 15px 0px 15px 0px;
     color: #fff;
 }
 @media (max-width: 767px)/*smartphone*/ {
@@ -49,12 +59,14 @@ span {
             flex-direction: row;
             justify-content: center;
             background-color: $darkgrey;
-            padding: 15px 0px 15px 0px;
+            padding: 15px 0px 15px 60px;
             box-shadow: 0px -3px 2px 0px #cfcfcf;
             input {
                 border: transparent;
                 outline: none;
                 background-color: $darkgrey;
+                font-weight: bold;
+                font-size: 1em;
             }
             label {
                 padding-right: 10px;
@@ -67,6 +79,11 @@ span {
             text-align: center;
             padding-bottom: 50px;
             background-color: $lightgrey;
+            p{
+                margin-top: -10px;
+                padding-bottom: 20px;
+                font-size: 1em;
+            }
         }  
     }
 /*----------section fonctionnement----------*/
@@ -79,8 +96,12 @@ span {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                .purple {
+                    background-color: #f5EDFF;
+                }
                 div {
                     width: 85%;
+                    height: 65px;
                     display: flex;
                     flex-direction: row;
                     background-color: $lightgrey;
@@ -91,7 +112,7 @@ span {
                         background-color: $primary;
                         color: #fff;
                         border-radius: 50%;
-                        padding: 2px 6px 2px 6px;
+                        padding: 2px 7px 2px 7px;
                         margin-left: -10px;
                     }
                     .fas {
@@ -116,6 +137,7 @@ span {
             flex-direction: column;
             background-color: $lightgrey;
             padding-bottom: 40px;
+            padding-top: 25px;
             div {
                 display: flex;
                 flex-direction: column;
@@ -158,16 +180,26 @@ span {
     }
 /*----------footer acceuil et menu----------*/        
     footer {
-        display: flex;
-        flex-direction: column;
-        padding: 0px 0px 40px 15px;
         background-color: $footer;
         color: #fff;
+        padding: 15px 0px 20px 0px;
+        ul {
+            display: flex;
+            flex-direction: column;
+            margin-left: -20px;
+            li {
+                list-style: none;
+                margin-bottom: 5px;
+                img {
+                    margin-left: -50px;
+                }    
+            }
+        }
         a {
             color: #fff;
         }
         .fas {
-            margin-right: 10px;
+            margin-right: 15px;
         }
     }  
 /*----------menu----------*/
