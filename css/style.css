@@ -6,14 +6,27 @@ body {
   font-family: "Roboto", sans-serif, serif;
 }
 
-h1 {
+h1, h2, h3 {
   font-family: "Roboto", sans-serif, serif;
+}
+
+h1 {
   font-size: 1.7em;
 }
 
+.shrik {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.6em;
+}
+
 h2 {
-  font-family: "Roboto", sans-serif, serif;
   font-size: 1.3em;
+  margin-left: 15px;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: normal;
   margin-left: 15px;
 }
 
@@ -29,6 +42,7 @@ a {
 
 span {
   font-weight: bold;
+  font-size: 1.1em;
 }
 
 .btn1 {
@@ -46,8 +60,15 @@ span {
   header {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+  header form button {
+    border: transparent;
+    background-color: transparent;
+    outline: none;
+    margin-left: -55px;
   }
 
   /*----------section localisation----------*/
@@ -106,7 +127,7 @@ span {
   }
   #operation article div div {
     width: 85%;
-    height: 65px;
+    height: 60px;
     display: flex;
     flex-direction: row;
     background-color: #f6f6f6;
@@ -170,7 +191,8 @@ span {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0px 15px 5px 15px;
+    margin-top: -10px;
+    padding: 0px 10px 0px 10px;
   }
   #restaurants article div figure figcaption .btn-heart {
     border: transparent;
@@ -204,13 +226,6 @@ span {
   }
 
   /*----------menu----------*/
-  .headermenu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  /*----------section----------*/
   .cards div img {
     width: 100%;
     object-fit: cover;
@@ -222,7 +237,7 @@ span {
     z-index: 100;
     background-color: #f6f6f6;
     border-radius: 25px 25px 0px 0px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
   }
   .cards article .titlemenu {
     display: flex;
@@ -235,8 +250,11 @@ span {
     flex-direction: column;
     align-items: center;
   }
+  .cards article .container .btn-order {
+    margin: 25px;
+  }
   .cards article .container .tiles {
-    width: 90%;
+    width: 93%;
     background-color: #fff;
     box-shadow: 0 0 5px 0.2em #e2e2e2;
     border-radius: 15px;
@@ -246,7 +264,7 @@ span {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: flex-end;
   }
 }
 
