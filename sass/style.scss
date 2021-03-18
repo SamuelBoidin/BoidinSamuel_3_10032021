@@ -44,13 +44,18 @@ span {
     font-size: 1.1em;
 }
 .btn1 {
-    width: 195px;
+    width: 190px;
     border: transparent;
     outline: none;
     border-radius: 50px; 
-    background-color: $primary;
+    background: linear-gradient($secondary, $primary);
     padding: 15px 0px 15px 0px;
     color: #fff;
+}
+.btn-heart {
+    border: transparent;
+    outline: none;
+    background-color: transparent;
 }
 @media (max-width: 767px)/*smartphone*/ {
 /*----------acceuil----------*/ 
@@ -65,7 +70,7 @@ span {
                 border: transparent;
                 background-color: transparent;
                 outline: none;
-                margin-left: -55px;
+                margin-left: -60px;
             }
         }
     }
@@ -189,11 +194,7 @@ span {
                         justify-content: space-between;
                         margin-top: -10px;
                         padding: 0px 10px 0px 10px;
-                        .btn-heart {
-                            border: transparent;
-                            outline: none;
-                            background-color: transparent;
-                        }
+                        
                     }
                 }
             }
@@ -262,7 +263,11 @@ span {
                         display: flex;
                         flex-direction: row;
                         justify-content: space-between;
-                        align-items: flex-end;         
+                        align-items: flex-end;
+                        padding: 0px 10px 0px 10px;
+                        .price {
+                            font-size: 1em;
+                        }      
                     }
                 }
             } 

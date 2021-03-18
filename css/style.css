@@ -46,13 +46,19 @@ span {
 }
 
 .btn1 {
-  width: 195px;
+  width: 190px;
   border: transparent;
   outline: none;
   border-radius: 50px;
-  background-color: #9356DC;
+  background: linear-gradient(#FF79DA, #9356DC);
   padding: 15px 0px 15px 0px;
   color: #fff;
+}
+
+.btn-heart {
+  border: transparent;
+  outline: none;
+  background-color: transparent;
 }
 
 @media (max-width: 767px) {
@@ -68,7 +74,7 @@ span {
     border: transparent;
     background-color: transparent;
     outline: none;
-    margin-left: -55px;
+    margin-left: -60px;
   }
 
   /*----------section localisation----------*/
@@ -194,11 +200,6 @@ span {
     margin-top: -10px;
     padding: 0px 10px 0px 10px;
   }
-  #restaurants article div figure figcaption .btn-heart {
-    border: transparent;
-    outline: none;
-    background-color: transparent;
-  }
 
   /*----------footer acceuil et menu----------*/
   footer {
@@ -265,6 +266,10 @@ span {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    padding: 0px 10px 0px 10px;
+  }
+  .cards article .container .tiles div .price {
+    font-size: 1em;
   }
 }
 
