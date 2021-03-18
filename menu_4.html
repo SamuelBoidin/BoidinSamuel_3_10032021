@@ -4,27 +4,125 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/1a6d12d27d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <title>Menu - Le délice des sens</title>
 </head>
 <body>
     <header>
-        <i class="fas fa-arrow-left"></i>
-        <img src="logo/ohmyfood@2x.svg">
+        <form action="/index.html">
+            <button type="submit"><i class="fas fa-arrow-left fa-lg"></i></button>
+        </form>
+        <img src="logo/ohmyfood@2x.svg" alt="Logo ohmyfood">  
     </header>
     <main>
+        <section class="cards">
+            <div>
+                <img src="images/le_délice_des_sens.jpg" alt="Le délice des sens">
+            </div>
+            <article>
+                <div class="titlemenu">
+                    <h1 class="shrik">Le délice des sens</h1>
+                    <i class="far fa-heart fa-lg"></i>
+                </div>
+                <div>
+                    <div>
+                        <h3>ENTRÉES</h3>
+                        <div class="container">
+                            <div class="tiles"> 
+                                <div>
+                                    <p><span>Tartare de thon</span><br />
+                                    Assaisonné au yuzu</p>
+                                    <p><span class="price">25€</span></p>
+                                </div>
+                            </div>
+                            <div class="tiles">
+                                <div>
+                                    <p><span>Bouchée de homard croustillant</span><br />
+                                    Et sa farandole de petits légumes</p>
+                                    <p><span class="price">35€</span></p>
+                                </div>
+                            </div>
+                            <div class="tiles">
+                                <div>
+                                    <p><span>Velouté de cèpes</span><br />
+                                    Aux truffes</p>
+                                    <p><span class="price">20€</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>PLATS</h3>
+                        <div class="container">
+                            <div class="tiles">
+                                <div>
+                                    <p><span>Poulet rôti aux herbes de Provence</span><br />
+                                    Et sa crème de truffe</p>
+                                    <p><span class="price">40€</span></p>
+                                </div>
+                            </div>
+                            <div class="tiles">
+                                <div>
+                                    <p><span>Langouste rôtie</span><br />
+                                    Et ses légumes de saison</p>
+                                    <p><span class="price">35€</span></p>
+                                </div>
+                            </div>
+                            <div class="tiles">
+                                <div>
+                                    <p><span>Côte de boeuf Angus</span><br />
+                                    Et sa purée de panais</p>
+                                    <p><span class="price">44€</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>DESSERTS</h3>
+                        <div class="container">
+                            <div class="tiles">
+                                <div>
+                                    <p><span>Farandole de desserts</span><br />
+                                    Du chef</p>
+                                    <p><span class="price">18€</span></p>
+                                </div>
+                            </div>
+                            <div class="tiles">
+                                <div>
+                                    <p><span>Crème brulée</span><br />
+                                    Revisitée</p>
+                                    <p><span class="price">22€</span></p>
+                                </div>
+                            </div>
+                            <div class="tiles">   
+                                <div>
+                                    <p><span>Tiramisu</span><br />
+                                    À la noisette</p>
+                                    <p><span class="price">23€</span></p>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn1 btn-order">Commander</button>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </article>   
+        </section>
     </main>
     <footer>
-        <div>
-            <img src="logo/ohmyfood@2x.svg">
-        </div>
-        <div>
-            <p>Proposer un restaurant</p>
-            <p>Devenir partenaire</p>
-            <p>Mentions légales</p>
-            <a href="#">Contact</a>
-        </div>
+        <ul>
+            <li><img src="logo/ohmyfood@footer.svg" alt="Logo Ohmyfood"></li>
+            <li><i class="fas fa-utensils fa-xs"></i>Proposer un restaurant</li>
+            <li><i class="fas fa-hands-helping fa-xs"></i>Devenir partenaire</li>
+            <li>Mentions légales</li>
+            <li><a href="mailto:contactohmyfoodnow@gmail.com">Contact</a></li>
+        </ul>
     </footer> 
 </body>
 </html>
