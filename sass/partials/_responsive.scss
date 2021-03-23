@@ -1,0 +1,217 @@
+@media (min-width: 768px) and (max-width: 1023px)/*tablet*/ {
+    body {
+        width: auto;
+    }
+    header {
+        form {
+            button {
+                margin-left: -250px;
+            }
+        }
+    }
+    #location {
+        form {
+            input {
+                font-size: 1.1em;
+            }
+        }
+    }
+    #operation {
+        article {
+            div {
+                flex-direction: row;
+                justify-content: space-around;
+                div {
+                    width: 235px;
+                    align-items: center;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    } 
+    #restaurants {
+        article {
+            div {
+                figure {
+                    width: 80%;
+                }
+            }
+        }
+    }
+    .cards {
+        article {
+            .cardscontainer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .container {
+                    .tiles {
+                       width: 550px; 
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        ul {
+            margin: 0;
+        }
+    } 
+}
+@media (min-width: 1024px) and (max-width: 1439px)/*laptop-s-m*/ {
+    body {
+       width: auto;
+    }
+    header {
+        form {
+            button {
+                margin-left: -350px;
+            }
+        }
+    }
+    #location {
+        form {
+            input {
+                font-size: 1.1em;
+            }
+        }
+    }
+    #operation {
+        article {
+            div {
+                flex-direction: row;
+                justify-content: space-around;
+                div {
+                    width: 300px;
+                    align-items: center;
+                    margin-bottom: 20px;
+                    .number {
+                        margin-left: -20px;
+                    }
+                }
+            }
+        }
+    }
+    #restaurants {
+        article {
+            div {
+                flex-direction: row;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                figure {
+                    height: 250px;
+                    width: 40%;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    .cards {
+        article {
+            .cardscontainer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .container {
+                    .tiles {
+                    width: 550px; 
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        ul {
+            margin: 0;
+        }
+    } 
+}
+@media (min-width: 1440px) /*laptop-l/desktop*/ {
+    body {
+        width: auto;
+        p {
+            font-size: 1.1em;
+        }
+        h1 {
+            font-size: 1.8em;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        h3 {
+            font-size: 1.2em;
+        }
+        .shrik {
+            font-size: 1.8em;
+        }
+        .btn1 {
+            font-size: 1em;
+            width: 220px;
+        }
+    }
+    header {
+        form {
+            button {
+                margin-left: -380px;
+            }
+        }
+    }
+    #location {
+        form {
+            input {
+                font-size: 1.1em;
+            }
+        }
+    }
+    #operation {
+        article {
+            div {
+                flex-direction: row;
+                justify-content: space-evenly;
+                div {
+                    width: 400px;
+                    align-items: center;
+                    margin-bottom: 20px;
+                    .number {
+                        margin-left: -48px;
+                    }
+                }
+            }
+        }   
+    }
+    #restaurants {
+        article {
+            div {
+                flex-direction: row;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                figure {
+                    height: 280px;
+                    width: 40%;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    .cards {
+        article {
+            .cardscontainer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .container {
+                    .tiles {
+                    width: 650px; 
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        ul {
+            font-size: 1em;
+            margin: 0 ;
+            
+        }
+    }
+}
