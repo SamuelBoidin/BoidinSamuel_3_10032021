@@ -1,0 +1,270 @@
+body {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto' , sans-serif , serif;
+}
+h1 , h2 , h3 { 
+    font-family: 'Roboto' , sans-serif , serif; 
+}
+h1 {
+    font-size: 1.7em;
+}
+.shrik {
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.6em;
+}
+h2 {
+    font-size: 1.3em;
+    margin-left: 15px;
+}
+h3 {
+    font-size: 1em;
+    font-weight: normal;
+    margin-left: 15px;
+}
+p , ul {
+    font-size: 0.9em
+}
+a {
+    text-decoration: none;
+    color: black;
+    outline: none;
+}
+span {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.btn1 {
+    width: 190px;
+    border: transparent;
+    outline: none;
+    border-radius: 50px; 
+    background: linear-gradient($secondary, $primary);
+    padding: 15px 0px 15px 0px;
+    color: #fff;
+}
+/*acceuil*/ 
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+        form {
+            button {
+                border: transparent;
+                background-color: transparent;
+                outline: none;
+                margin-left: -60px;
+                cursor: pointer;
+            }
+        }
+    }
+/*section localisation*/ 
+#location {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border: transparent;
+        outline: none;
+        font-weight: bold;
+        background-color: $darkgrey; 
+        box-shadow: 0px -3px 2px 0px #cfcfcf;
+        padding: 15px 0px 15px 0px;
+        input {
+            width: 150px;
+            outline: none;
+            border: transparent;
+            background-color: $darkgrey;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        label {
+            margin-right: 10px;
+        }
+    }
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: $lightgrey;
+        padding-bottom: 50px;
+        p {
+            margin-top: -10px;
+            padding-bottom: 20px;
+            font-size: 1em;
+        }
+    }  
+}
+/*section fonctionnement*/
+#operation {
+    margin-bottom: 50px;
+    article {
+        display: flex;
+        flex-direction: column;
+        h2 {
+            margin-bottom: 25px;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            div {
+                width: 85%;
+                height: 60px;
+                display: flex;
+                flex-direction: row;
+                background-color: $lightgrey;
+                border-radius: 20px;
+                box-shadow: 0 0 13px 0.2em #e2e2e2;
+                margin-bottom: 20px;
+                .number {
+                    background-color: $primary;
+                    color: #fff;
+                    border-radius: 50%;
+                    padding: 2px 7px 2px 7px;
+                    margin-left: -10px;
+                }
+                .fas {
+                    color: #7e7e7e;
+                }
+                p {
+                    margin-right: 20px;
+                }
+            }
+            .purple {
+                background-color: #f5EDFF;
+                .fas {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+/*section restaurants*/
+#restaurants {
+    article {
+        display: flex;
+        flex-direction: column;
+        background-color: $lightgrey;
+        padding-bottom: 40px;
+        padding-top: 25px;
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            figure {
+                width: 90%;
+                height: 235px;
+                border-radius: 15px;
+                box-shadow: 0 0 5px 0.2em #e2e2e2;
+                position: relative;
+                img {
+                    width: 100%;
+                    height: 75%;
+                    object-fit: cover;
+                    border-radius: 15px 15px 0px 0px;
+                }
+                .new {
+                    background-color: $tertiary;
+                    color: $greentxt;
+                    position: absolute;
+                    border-radius: 2px;
+                    top: 0px;
+                    right: 10px;
+                    padding: 3px 5px 3px 5px;
+                }
+                figcaption {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin-top: -10px;
+                    padding: 0px 10px 0px 10px;
+                        
+                }
+            }
+        }
+    }    
+}
+/*footer acceuil et menu*/        
+footer {
+    background-color: $footer;
+    color: #fff;
+    padding: 15px 0px 20px 0px;
+    ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: -20px;
+        li {
+            list-style: none;
+            margin-bottom: 5px;
+            img {
+                margin-left: -50px;
+            }    
+        }
+    }
+    a {
+        color: #fff;
+    }
+    .fas {
+        margin-right: 15px;
+    }
+}  
+/*menu*/
+.cards {
+    div {
+        img {
+            width: 100%;
+            object-fit: cover;
+            height: 260px;
+            margin-bottom: -60px;
+        }
+    }
+    article{
+        position: relative;
+        z-index: 100;
+        background-color: $lightgrey;
+        border-radius: 25px 25px 0px 0px;
+        padding-bottom: 40px;
+        .titlemenu {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: baseline;
+        } 
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .btn-order {
+                margin: 25px;
+            }
+            .tiles {
+                width: 93%;
+                background-color: #fff;
+                box-shadow: 0 0 5px 0.2em #e2e2e2;
+                border-radius: 15px;
+                margin-bottom: 20px;
+                opacity: 0;
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    padding: 0px 10px 0px 10px;
+                    .price {
+                        font-size: 1em;
+                    }      
+                }
+            }
+        } 
+    }          
+}

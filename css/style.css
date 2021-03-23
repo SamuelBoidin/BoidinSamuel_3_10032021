@@ -55,12 +55,6 @@ span {
   color: #fff;
 }
 
-.btn-heart {
-  border: transparent;
-  outline: none;
-  background-color: transparent;
-}
-
 /*acceuil*/
 header {
   display: flex;
@@ -74,6 +68,7 @@ header form button {
   background-color: transparent;
   outline: none;
   margin-left: -60px;
+  cursor: pointer;
 }
 
 /*section localisation*/
@@ -267,6 +262,7 @@ footer .fas {
   box-shadow: 0 0 5px 0.2em #e2e2e2;
   border-radius: 15px;
   margin-bottom: 20px;
+  opacity: 0;
 }
 .cards article .container .tiles div {
   display: flex;
@@ -279,9 +275,127 @@ footer .fas {
   font-size: 1em;
 }
 
+.starter {
+  animation: 1s linear 0.4s forwards starter-slide;
+  -moz-animation: 1s linear 0.4s forwards starter-slide;
+  -webkit-animation: 1s linear 0.4s forwards starter-slide;
+}
+
+@keyframes starter-slide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-moz-keyframes starter-slide {
+  /* sur Firefox */
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes starter-slide {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.main-course {
+  animation: 1s linear 1s forwards main-course-slide;
+  -moz-animation: 1s linear 1s forwards main-course-slide;
+  -webkit-animation: 1s linear 1s forwards main-course-slide;
+}
+
+@keyframes main-course-slide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-moz-keyframes main-course-slide {
+  /* sur Firefox */
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes main-course-slide {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.desserts {
+  animation: 1s linear 1.5s forwards desserts-slide;
+  -moz-animation: 1s linear 1.5s forwards desserts-slide;
+  -webkit-animation: 1s linear 1.5s forwards desserts-slide;
+}
+
+@keyframes desserts-slide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-moz-keyframes desserts-slide {
+  /* sur Firefox */
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes desserts-slide {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 @media (min-width: 768px) and (max-width: 1023px) {
   body {
     width: auto;
+  }
+
+  header form button {
+    margin-left: -250px;
   }
 
   #location form input {
@@ -318,6 +432,10 @@ footer .fas {
 @media (min-width: 1024px) and (max-width: 1439px) {
   body {
     width: auto;
+  }
+
+  header form button {
+    margin-left: -350px;
   }
 
   #location form input {
@@ -383,6 +501,10 @@ footer .fas {
   body .btn1 {
     font-size: 1em;
     width: 220px;
+  }
+
+  header form button {
+    margin-left: -380px;
   }
 
   #location form input {
