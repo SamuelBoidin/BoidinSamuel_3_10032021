@@ -53,6 +53,12 @@ span {
   background: linear-gradient(#FF79DA, #9356DC);
   padding: 15px 0px 15px 0px;
   color: #fff;
+  box-shadow: 0px 5px 12px 0px #c6c6c6;
+  cursor: pointer;
+}
+.btn1:hover {
+  opacity: 0.8;
+  box-shadow: 0px 5px 10px 3px #c6c6c6;
 }
 
 /*acceuil*/
@@ -78,7 +84,7 @@ header form button {
   flex-direction: column;
   margin-bottom: 20px;
 }
-#location form {
+#location .locationfield {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -89,7 +95,7 @@ header form button {
   box-shadow: 0px -3px 2px 0px #cfcfcf;
   padding: 15px 0px 15px 0px;
 }
-#location form input {
+#location .locationfield input {
   width: 150px;
   outline: none;
   border: transparent;
@@ -97,7 +103,7 @@ header form button {
   font-weight: bold;
   font-size: 1em;
 }
-#location form label {
+#location .locationfield label {
   margin-right: 10px;
 }
 #location article {
@@ -137,7 +143,7 @@ header form button {
   flex-direction: row;
   background-color: #f6f6f6;
   border-radius: 20px;
-  box-shadow: 0 0 13px 0.2em #e2e2e2;
+  box-shadow: 0 3px 15px 2px #e2e2e2;
   margin-bottom: 20px;
 }
 #operation article div div .number {
@@ -279,6 +285,7 @@ footer .fas {
   animation: 1s linear 0.4s forwards starter-slide;
   -moz-animation: 1s linear 0.4s forwards starter-slide;
   -webkit-animation: 1s linear 0.4s forwards starter-slide;
+  -o-animation: 1s linear 0.4s forwards starter-slide;
 }
 
 @keyframes starter-slide {
@@ -292,7 +299,6 @@ footer .fas {
   }
 }
 @-moz-keyframes starter-slide {
-  /* sur Firefox */
   from {
     opacity: 0;
     transform: translateY(15px);
@@ -303,7 +309,6 @@ footer .fas {
   }
 }
 @-webkit-keyframes starter-slide {
-  /* sur Safari et Chrome */
   from {
     opacity: 0;
     transform: translateY(15px);
@@ -317,6 +322,7 @@ footer .fas {
   animation: 1s linear 1s forwards main-course-slide;
   -moz-animation: 1s linear 1s forwards main-course-slide;
   -webkit-animation: 1s linear 1s forwards main-course-slide;
+  -o-animation: 1s linear 0.4s forwards starter-slide;
 }
 
 @keyframes main-course-slide {
@@ -330,7 +336,6 @@ footer .fas {
   }
 }
 @-moz-keyframes main-course-slide {
-  /* sur Firefox */
   from {
     opacity: 0;
     transform: translateY(15px);
@@ -341,7 +346,6 @@ footer .fas {
   }
 }
 @-webkit-keyframes main-course-slide {
-  /* sur Safari et Chrome */
   from {
     opacity: 0;
     transform: translateY(15px);
@@ -354,7 +358,8 @@ footer .fas {
 .desserts {
   animation: 1s linear 1.5s forwards desserts-slide;
   -moz-animation: 1s linear 1.5s forwards desserts-slide;
-  -webkit-animation: 1s linear 1.5s forwards desserts-slide;
+  -webkit-animation: 1s linear 1s forwards main-course-slide;
+  -o-animation: 1s linear 0.4s forwards starter-slide;
 }
 
 @keyframes desserts-slide {
@@ -368,7 +373,6 @@ footer .fas {
   }
 }
 @-moz-keyframes desserts-slide {
-  /* sur Firefox */
   from {
     opacity: 0;
     transform: translateY(15px);
@@ -379,7 +383,6 @@ footer .fas {
   }
 }
 @-webkit-keyframes desserts-slide {
-  /* sur Safari et Chrome */
   from {
     opacity: 0;
     transform: translateY(15px);

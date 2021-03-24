@@ -19,14 +19,16 @@
     <main>
 <!--section localisation-->
         <section id="location">
-            <form>
-                <label><i class="fas fa-map-marker-alt"></i></label>
-                <input type="text" name="localisation" value="Paris, Belleville"/>
+            <form class="locationfield" method="POST" action="#">
+                <label for="city"><i class="fas fa-map-marker-alt"></i></label>
+                <input type="text" name="localisation" value="Paris, Belleville" id="city"/>
             </form>
             <article>
                 <h1>Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                <button class="btn1 btn-exploration">Explorer nos restaurants</button>
+                <form class="form-exploration" method="POST" action="#">
+                <button type="submit" class="btn1 btn-exploration" disabled>Explorer nos restaurants</button>
+                </form>
             </article>
         </section>
 <!--section fonctionnement-->

@@ -2,6 +2,7 @@
     animation: 1s linear 0.4s forwards starter-slide;
     -moz-animation: 1s linear 0.4s forwards starter-slide;
     -webkit-animation: 1s linear 0.4s forwards starter-slide;
+    -o-animation: 1s linear 0.4s forwards starter-slide;
 }
 @keyframes starter-slide {
     from {
@@ -13,7 +14,7 @@
         transform: translateY(0px)
     }
 }
-@-moz-keyframes starter-slide { /* sur Firefox */
+@-moz-keyframes starter-slide {
     from {
         opacity:0;
         transform: translateY(15px)
@@ -23,7 +24,7 @@
         transform: translateY(0px)
     }
 }
-@-webkit-keyframes starter-slide { /* sur Safari et Chrome */
+@-webkit-keyframes starter-slide {
     from {
         opacity:0;
         transform: translateY(15px)
@@ -37,6 +38,7 @@
     animation: 1s linear 1s forwards main-course-slide;
     -moz-animation: 1s linear 1s forwards main-course-slide;
     -webkit-animation: 1s linear 1s forwards main-course-slide;
+    -o-animation: 1s linear 0.4s forwards starter-slide;
 }
 @keyframes main-course-slide {
     from {
@@ -48,7 +50,7 @@
         transform: translateY(0px)
     }
 }
-@-moz-keyframes main-course-slide { /* sur Firefox */
+@-moz-keyframes main-course-slide {
     from {
         opacity:0;
         transform: translateY(15px)
@@ -58,7 +60,7 @@
         transform: translateY(0px)
     }
 }
-@-webkit-keyframes main-course-slide { /* sur Safari et Chrome */
+@-webkit-keyframes main-course-slide {
     from {
         opacity:0;
         transform: translateY(15px)
@@ -71,7 +73,8 @@
 .desserts {
     animation: 1s linear 1.5s forwards desserts-slide;
     -moz-animation: 1s linear 1.5s forwards desserts-slide;
-    -webkit-animation: 1s linear 1.5s forwards desserts-slide;
+    -webkit-animation: 1s linear 1s forwards main-course-slide;
+    -o-animation: 1s linear 0.4s forwards starter-slide;
 }
 @keyframes desserts-slide {
     from {
@@ -83,7 +86,7 @@
         transform: translateY(0px)
     }
 }
-@-moz-keyframes desserts-slide { /* sur Firefox */
+@-moz-keyframes desserts-slide {
     from {
         opacity:0;
         transform: translateY(15px)
@@ -93,7 +96,7 @@
         transform: translateY(0px)
     }
 }
-@-webkit-keyframes desserts-slide { /* sur Safari et Chrome */
+@-webkit-keyframes desserts-slide {
     from {
         opacity:0;
         transform: translateY(15px)
