@@ -23,6 +23,7 @@ h3 {
     font-size: 1em;
     font-weight: normal;
     margin-left: 15px;
+    margin-bottom: 25px;
 }
 p , ul {
     font-size: 0.9em
@@ -36,6 +37,12 @@ span {
     font-weight: bold;
     font-size: 1.1em;
 }
+.underline {
+    font-size: 1em;
+    padding-bottom: 5px;
+    font-weight: normal;
+    border-bottom: solid 3px $tertiary;
+}
 .btn1 {
     width: 190px;
     border: transparent;
@@ -45,12 +52,6 @@ span {
     padding: 15px 0px 15px 0px;
     color: #fff;
     box-shadow: 0px 5px 12px 0px #c6c6c6;
-    cursor: pointer;
-/*animation des bouttons*/ 
-    &:hover {
-        opacity: 0.8;
-        box-shadow: 0px 5px 10px 3px #c6c6c6;
-    }
 }
 /*acceuil*/ 
 header {
@@ -65,7 +66,6 @@ header {
                 background-color: transparent;
                 outline: none;
                 margin-left: -60px;
-                cursor: pointer;
             }
         }
     }
@@ -195,7 +195,6 @@ header {
                     justify-content: space-between;
                     margin-top: -10px;
                     padding: 0px 10px 0px 10px;
-                        
                 }
             }
         }
@@ -266,7 +265,6 @@ footer {
                 border-radius: 15px;
                 margin-bottom: 20px;
                 opacity: 0;
-                cursor: pointer;
                 div {
                     width: 100%;
                     display: flex;
