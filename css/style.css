@@ -1,3 +1,132 @@
+/*animation de la coche*/
+.cards article .container .tiles:hover .check {
+  -webkit-transition: width 0.3s linear;
+  -moz-transition: width 0.3s linear;
+  -o-transition: width 0.3s linear;
+  transition: width 0.3s linear;
+  width: 23%;
+}
+.cards article .container .tiles:hover .check .fas {
+  transition: transform 0.3s linear;
+  transform: rotate(360deg);
+}
+.cards article .container .tiles:not(:hover) .check {
+  -webkit-transition: width 0.3s linear;
+  -moz-transition: width 0.3s linear;
+  -o-transition: width 0.3s linear;
+  transition: width 0.3s linear;
+  width: 0%;
+}
+
+/*animation des menus*/
+.tiles-starter {
+  animation: 1s linear 0.4s forwards starter-slide;
+  -moz-animation: 1s linear 0.4s forwards starter-slide;
+  -webkit-animation: 1s linear 0.4s forwards starter-slide;
+}
+
+@keyframes starter-slide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-moz-keyframes starter-slide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes starter-slide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.tiles-main-course {
+  animation: 1s linear 1s forwards main-course-slide;
+  -moz-animation: 1s linear 1s forwards main-course-slide;
+  -webkit-animation: 1s linear 1s forwards main-course-slide;
+}
+
+@keyframes main-course-slide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-moz-keyframes main-course-slide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes main-course-slide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.tiles-desserts {
+  animation: 1s linear 1.5s forwards desserts-slide;
+  -moz-animation: 1s linear 1.5s forwards desserts-slide;
+  -webkit-animation: 1s linear 1s forwards main-course-slide;
+}
+
+@keyframes desserts-slide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-moz-keyframes desserts-slide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes desserts-slide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 body {
   width: 100%;
   margin: 0;
@@ -55,6 +184,7 @@ span {
   color: #fff;
   box-shadow: 0px 5px 12px 0px #c6c6c6;
   cursor: pointer;
+  /*animation des bouttons*/
 }
 .btn1:hover {
   opacity: 0.8;
@@ -263,135 +393,51 @@ footer .fas {
   margin: 25px;
 }
 .cards article .container .tiles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 93%;
+  height: 60px;
   background-color: #fff;
   box-shadow: 0 0 5px 0.2em #e2e2e2;
   border-radius: 15px;
   margin-bottom: 20px;
   opacity: 0;
+  cursor: pointer;
 }
 .cards article .container .tiles div {
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: flex-end;
-  padding: 0px 10px 0px 10px;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 0px 15px 0px 15px;
+}
+.cards article .container .tiles div .name {
+  line-height: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .cards article .container .tiles div .price {
-  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+.cards article .container .tiles .check {
+  width: 0%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 15px 15px 0px;
+  color: #fff;
+  background-color: #99E2D0;
+  overflow: hidden;
 }
 
-.starter {
-  animation: 1s linear 0.4s forwards starter-slide;
-  -moz-animation: 1s linear 0.4s forwards starter-slide;
-  -webkit-animation: 1s linear 0.4s forwards starter-slide;
-  -o-animation: 1s linear 0.4s forwards starter-slide;
-}
-
-@keyframes starter-slide {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-@-moz-keyframes starter-slide {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-@-webkit-keyframes starter-slide {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-.main-course {
-  animation: 1s linear 1s forwards main-course-slide;
-  -moz-animation: 1s linear 1s forwards main-course-slide;
-  -webkit-animation: 1s linear 1s forwards main-course-slide;
-  -o-animation: 1s linear 0.4s forwards starter-slide;
-}
-
-@keyframes main-course-slide {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-@-moz-keyframes main-course-slide {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-@-webkit-keyframes main-course-slide {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-.desserts {
-  animation: 1s linear 1.5s forwards desserts-slide;
-  -moz-animation: 1s linear 1.5s forwards desserts-slide;
-  -webkit-animation: 1s linear 1s forwards main-course-slide;
-  -o-animation: 1s linear 0.4s forwards starter-slide;
-}
-
-@keyframes desserts-slide {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-@-moz-keyframes desserts-slide {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-@-webkit-keyframes desserts-slide {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
 @media (min-width: 768px) and (max-width: 1023px) {
   body {
     width: auto;

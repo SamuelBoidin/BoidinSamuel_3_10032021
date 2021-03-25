@@ -1,8 +1,39 @@
-.starter {
+/*animation de la coche*/
+.cards {
+    article {
+        .container {
+            .tiles {
+                &:hover {
+                    .check {
+                    -webkit-transition: width 0.3s linear;
+                    -moz-transition: width 0.3s linear;
+                    -o-transition: width 0.3s linear;
+                    transition: width 0.3s linear;
+                    width: 23%;
+                        .fas {
+                            transition: transform 0.3s linear;
+                            transform: rotate(360deg)
+                        }
+                    }  
+                }
+                &:not(:hover) {
+                    .check {
+                        -webkit-transition: width 0.3s linear;
+                        -moz-transition: width 0.3s linear;
+                        -o-transition: width 0.3s linear;
+                        transition: width 0.3s linear;
+                        width: 0%;
+                    }
+                } 
+            }
+        }
+    }
+}
+/*animation des menus*/
+.tiles-starter {
     animation: 1s linear 0.4s forwards starter-slide;
     -moz-animation: 1s linear 0.4s forwards starter-slide;
     -webkit-animation: 1s linear 0.4s forwards starter-slide;
-    -o-animation: 1s linear 0.4s forwards starter-slide;
 }
 @keyframes starter-slide {
     from {
@@ -34,11 +65,10 @@
         transform: translateY(0px)
     }
 }
-.main-course {
+.tiles-main-course {
     animation: 1s linear 1s forwards main-course-slide;
     -moz-animation: 1s linear 1s forwards main-course-slide;
     -webkit-animation: 1s linear 1s forwards main-course-slide;
-    -o-animation: 1s linear 0.4s forwards starter-slide;
 }
 @keyframes main-course-slide {
     from {
@@ -70,11 +100,10 @@
         transform: translateY(0px)
     }
 }
-.desserts {
+.tiles-desserts {
     animation: 1s linear 1.5s forwards desserts-slide;
     -moz-animation: 1s linear 1.5s forwards desserts-slide;
     -webkit-animation: 1s linear 1s forwards main-course-slide;
-    -o-animation: 1s linear 0.4s forwards starter-slide;
 }
 @keyframes desserts-slide {
     from {
