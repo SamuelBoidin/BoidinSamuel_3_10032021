@@ -46,6 +46,7 @@ span {
     color: #fff;
     box-shadow: 0px 5px 12px 0px #c6c6c6;
     cursor: pointer;
+/*animation des bouttons*/ 
     &:hover {
         opacity: 0.8;
         box-shadow: 0px 5px 10px 3px #c6c6c6;
@@ -254,21 +255,48 @@ footer {
                 margin: 25px;
             }
             .tiles {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items:center;
                 width: 93%;
+                height: 60px;
                 background-color: #fff;
                 box-shadow: 0 0 5px 0.2em #e2e2e2;
                 border-radius: 15px;
                 margin-bottom: 20px;
                 opacity: 0;
+                cursor: pointer;
                 div {
+                    width: 100%;
                     display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
                     align-items: flex-end;
-                    padding: 0px 10px 0px 10px;
+                    justify-content: space-between;
+                    overflow: hidden;
+                    padding: 0px 15px 0px 15px;
+                    .name {
+                        line-height: 20px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
                     .price {
-                        font-size: 1em;
-                    }      
+                        display: flex;
+                        justify-content: center;
+                        font-size: 0.9em;
+                        font-weight: bold;
+                    }
+                }
+                .check {
+                    width: 0%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 0px 15px 15px 0px;
+                    color:#fff;
+                    background-color: $tertiary;
+                    overflow: hidden;
                 }
             }
         } 
