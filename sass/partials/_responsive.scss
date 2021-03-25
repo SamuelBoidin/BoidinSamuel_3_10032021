@@ -215,3 +215,39 @@
         }
     }
 }
+@media (min-width: 768px) /*hover-cursor laptop-l/desktop*/{
+    header {
+        button {
+            cursor: pointer;
+        }
+    }
+    .btn1 {
+        cursor: pointer;
+    }
+/*animation coches*/
+    .tiles {
+        cursor: pointer;
+        &:hover {
+            .check {
+            -webkit-transition: width 0.3s linear;
+            -moz-transition: width 0.3s linear;
+            -o-transition: width 0.3s linear;
+            transition: width 0.3s linear;
+            width: 23%;
+                .fas {
+                    transition: transform 0.3s linear;
+                    transform: rotate(360deg)
+                }
+            }  
+        }
+        &:not(:hover) {
+            .check {
+                -webkit-transition: width 0.3s linear;
+                -moz-transition: width 0.3s linear;
+                -o-transition: width 0.3s linear;
+                transition: width 0.3s linear;
+                width: 0%;
+            }
+        }
+    }
+} 
