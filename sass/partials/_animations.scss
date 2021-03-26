@@ -89,9 +89,6 @@
     width: 100%;
     height: 100vh;
     background: linear-gradient($secondary, $primary, $tertiary);
-    animation: opacity-loading 3s linear forwards;
-    -moz-animation: opacity-loading 3s linear forwards;
-    -webkit-animation: opacity-loading 3s linear forwards;
     animation: loading 3s linear forwards;
     -moz-animation: loading 3s linear forwards;
     -webkit-animation: loading 3s linear forwards;
@@ -124,51 +121,33 @@
         animation-delay: .45s
     }
 }
-@keyframes opacity-loading {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0.2;
-    }
-}
-@-moz-keyframes opacity-loading {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0.2;
-    }
-}
-@-webkit-keyframes opacity-loading {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0.2;
-    }
-}
 @keyframes loading {
     from {
+        opacity: 1;
         visibility: visible;
     }
-     to {
+    to {
+        opacity: 0;
         visibility: hidden;
     }
 }
 @-moz-keyframes loading {
     from {
+        opacity: 1;
         visibility: visible;
     }
-     to {
+    to {
+        opacity: 0;
         visibility: hidden;
     }
 }
 @-webkit-keyframes loading {
     from {
+        opacity: 1;
         visibility: visible;
     }
-     to {
+    to {
+        opacity: 0;
         visibility: hidden;
     }
 }
