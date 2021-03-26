@@ -84,14 +84,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    z-index: 1000;
+    position: fixed;
+    z-index: 1 ;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient($secondary, $primary, $tertiary);
-    animation: loading 3s linear forwards;
-    -moz-animation: loading 3s linear forwards;
-    -webkit-animation: loading 3s linear forwards;
+    animation: loading 3s ease-in forwards;
+    -moz-animation: loading 3s ease-in forwards;
+    -webkit-animation: loading 3s ease-in forwards;
     .loader-bars , .loader-bars:before , .loader-bars::after {
         background: #fff;
         animation: grow 1s ease-in-out infinite;
