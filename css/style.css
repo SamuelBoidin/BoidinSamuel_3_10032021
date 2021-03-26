@@ -8,7 +8,6 @@
 .cards article .container .tiles:active .check {
   -webkit-transition: width 0.3s linear;
   -moz-transition: width 0.3s linear;
-  -o-transition: width 0.3s linear;
   transition: width 0.3s linear;
   width: 23%;
 }
@@ -19,91 +18,30 @@
 .cards article .container .tiles:not(:active) .check {
   -webkit-transition: width 0.3s linear;
   -moz-transition: width 0.3s linear;
-  -o-transition: width 0.3s linear;
   transition: width 0.3s linear;
   width: 0%;
 }
 
 /*animation des menus*/
+.tiles-starter, .tiles-main-course, .tiles-desserts {
+  animation: 1s linear forwards slide;
+  -moz-animation: 1s linear forwards slide;
+  -webkit-animation: 1s linear forwards slide;
+}
+
 .tiles-starter {
-  animation: 1s linear 0.4s forwards starter-slide;
-  -moz-animation: 1s linear 0.4s forwards starter-slide;
-  -webkit-animation: 1s linear 0.4s forwards starter-slide;
+  animation-delay: 0.4s;
 }
 
-@keyframes starter-slide {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-@-moz-keyframes starter-slide {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-@-webkit-keyframes starter-slide {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
 .tiles-main-course {
-  animation: 1s linear 1s forwards main-course-slide;
-  -moz-animation: 1s linear 1s forwards main-course-slide;
-  -webkit-animation: 1s linear 1s forwards main-course-slide;
+  animation-delay: 0.8s;
 }
 
-@keyframes main-course-slide {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-@-moz-keyframes main-course-slide {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-@-webkit-keyframes main-course-slide {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
 .tiles-desserts {
-  animation: 1s linear 1.5s forwards desserts-slide;
-  -moz-animation: 1s linear 1.5s forwards desserts-slide;
-  -webkit-animation: 1s linear 1s forwards main-course-slide;
+  animation-delay: 1.2s;
 }
 
-@keyframes desserts-slide {
+@keyframes slide {
   from {
     opacity: 0;
     transform: translateY(15px);
@@ -113,7 +51,7 @@
     transform: translateY(0px);
   }
 }
-@-moz-keyframes desserts-slide {
+@-moz-keyframes slide {
   from {
     opacity: 0;
     transform: translateY(15px);
@@ -123,7 +61,7 @@
     transform: translateY(0px);
   }
 }
-@-webkit-keyframes desserts-slide {
+@-webkit-keyframes slide {
   from {
     opacity: 0;
     transform: translateY(15px);
@@ -131,6 +69,142 @@
   to {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+/*animation loader*/
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(#FF79DA, #9356DC, #99E2D0);
+  animation: opacity-loading 3s linear forwards;
+  -moz-animation: opacity-loading 3s linear forwards;
+  -webkit-animation: opacity-loading 3s linear forwards;
+  animation: loading 3s linear forwards;
+  -moz-animation: loading 3s linear forwards;
+  -webkit-animation: loading 3s linear forwards;
+}
+#loader .loader-bars, #loader .loader-bars:before, #loader .loader-bars::after {
+  background: #fff;
+  animation: grow 1s ease-in-out infinite;
+  -moz-animation: grow 1s ease-in-out infinite;
+  -webkit-animation: grow 1s ease-in-out infinite;
+  opacity: 0;
+  width: 10px;
+  height: 40px;
+}
+#loader .loader-bars {
+  width: 10px;
+  height: 40px;
+  animation-delay: 0.15s;
+}
+#loader .loader-bars:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 15px;
+  animation-delay: 0.25s;
+}
+#loader .loader-bars::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 15px;
+  animation-delay: 0.45s;
+}
+
+@keyframes opacity-loading {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+@-moz-keyframes opacity-loading {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+@-webkit-keyframes opacity-loading {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+@keyframes loading {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+@-moz-keyframes loading {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes loading {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes grow {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+@-moz-keyframes grow {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes grow {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
   }
 }
 body {
@@ -546,6 +620,7 @@ footer .fas {
   }
   body h2 {
     font-size: 1.5em;
+    margin-left: 30px;
   }
   body h3 {
     font-size: 1.2em;
@@ -614,24 +689,22 @@ footer .fas {
   }
 
   /*animation coches*/
-  .tiles {
+  .cards article .container .tiles:hover {
     cursor: pointer;
   }
-  .tiles:hover .check {
+  .cards article .container .tiles:hover .check {
     -webkit-transition: width 0.3s linear;
     -moz-transition: width 0.3s linear;
-    -o-transition: width 0.3s linear;
     transition: width 0.3s linear;
     width: 23%;
   }
-  .tiles:hover .check .fas {
+  .cards article .container .tiles:hover .check .fas {
     transition: transform 0.3s linear;
     transform: rotate(360deg);
   }
-  .tiles:not(:hover) .check {
+  .cards article .container .tiles:not(:hover) .check {
     -webkit-transition: width 0.3s linear;
     -moz-transition: width 0.3s linear;
-    -o-transition: width 0.3s linear;
     transition: width 0.3s linear;
     width: 0%;
   }

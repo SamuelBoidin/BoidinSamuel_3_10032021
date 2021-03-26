@@ -137,6 +137,7 @@
         }
         h2 {
             font-size: 1.5em;
+            margin-left: 30px;
         }
         h3 {
             font-size: 1.2em;
@@ -225,28 +226,32 @@
         cursor: pointer;
     }
 /*animation coches*/
-    .tiles {
-        cursor: pointer;
-        &:hover {
-            .check {
-            -webkit-transition: width 0.3s linear;
-            -moz-transition: width 0.3s linear;
-            -o-transition: width 0.3s linear;
-            transition: width 0.3s linear;
-            width: 23%;
-                .fas {
-                    transition: transform 0.3s linear;
-                    transform: rotate(360deg)
-                }
-            }  
-        }
-        &:not(:hover) {
-            .check {
-                -webkit-transition: width 0.3s linear;
-                -moz-transition: width 0.3s linear;
-                -o-transition: width 0.3s linear;
-                transition: width 0.3s linear;
-                width: 0%;
+    .cards {
+        article {
+            .container {
+                .tiles {
+                    &:hover {
+                        cursor: pointer;
+                        .check {
+                        -webkit-transition: width 0.3s linear;
+                        -moz-transition: width 0.3s linear;
+                        transition: width 0.3s linear;
+                        width: 23%;
+                            .fas {
+                                transition: transform 0.3s linear;
+                                transform: rotate(360deg)
+                            }
+                        }  
+                    }
+                    &:not(:hover) {
+                        .check {
+                            -webkit-transition: width 0.3s linear;
+                            -moz-transition: width 0.3s linear;
+                            transition: width 0.3s linear;
+                            width: 0%;
+                        }
+                    }
+                } 
             }
         }
     }
