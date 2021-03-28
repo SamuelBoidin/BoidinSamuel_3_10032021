@@ -4,6 +4,27 @@
   box-shadow: 0px 5px 10px 3px #c6c6c6;
 }
 
+/*animation coeurs*/
+.form-heart .btn-heart:active .gradient {
+  color: transparent;
+}
+.form-heart .btn-heart:active .nograd {
+  visibility: visible;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition: height 0.4s linear;
+  -moz-transition: height 0.4s linear;
+  transition: height 0.4s linear;
+  height: 100px;
+}
+.form-heart .btn-heart:not(:active) .nograd {
+  -webkit-transition: height 0.4s linear;
+  -moz-transition: height 0.4s linear;
+  transition: height 0.4s linear;
+  height: 0;
+}
+
 /*animation coches*/
 .cards article .container .tiles:active .check {
   -webkit-transition: width 0.3s linear;
@@ -73,44 +94,22 @@
 }
 /*animation loader*/
 #loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  min-height: 100vh;
-  background: linear-gradient(#FF79DA, #9356DC, #99E2D0);
   animation: loading 3s ease-in forwards;
   -moz-animation: loading 3s ease-in forwards;
   -webkit-animation: loading 3s ease-in forwards;
 }
 #loader .loader-bars, #loader .loader-bars:before, #loader .loader-bars::after {
-  background: #fff;
   animation: grow 1s ease-in-out infinite;
   -moz-animation: grow 1s ease-in-out infinite;
   -webkit-animation: grow 1s ease-in-out infinite;
-  opacity: 0;
-  width: 10px;
-  height: 40px;
 }
 #loader .loader-bars {
-  width: 10px;
-  height: 40px;
   animation-delay: 0.15s;
 }
 #loader .loader-bars:before {
-  content: "";
-  display: block;
-  position: absolute;
-  right: 15px;
   animation-delay: 0.25s;
 }
 #loader .loader-bars::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 15px;
   animation-delay: 0.45s;
 }
 
@@ -254,6 +253,30 @@ span {
   box-shadow: 0px 5px 12px 0px #c6c6c6;
 }
 
+.form-heart .btn-heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border: transparent;
+  background-color: #fff;
+}
+.form-heart .btn-heart .gradient {
+  background-color: #fff;
+  color: black;
+  z-index: 0;
+}
+.form-heart .btn-heart .nograd {
+  visibility: hidden;
+  position: absolute;
+  color: #fff;
+  top: 10px;
+  width: 50%;
+  max-height: 0;
+}
+
 /*acceuil*/
 header {
   display: flex;
@@ -267,6 +290,40 @@ header form button {
   background-color: transparent;
   outline: none;
   margin-left: -60px;
+}
+
+/*section loader*/
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(#FF79DA, #9356DC, #99E2D0);
+}
+#loader .loader-bars, #loader .loader-bars:before, #loader .loader-bars::after {
+  background: #fff;
+  opacity: 0;
+  width: 10px;
+  height: 40px;
+}
+#loader .loader-bars {
+  width: 10px;
+  height: 40px;
+}
+#loader .loader-bars:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 15px;
+}
+#loader .loader-bars::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 15px;
 }
 
 /*section localisation*/
@@ -377,6 +434,7 @@ header form button {
   border-radius: 15px;
   box-shadow: 0 0 5px 0.2em #e2e2e2;
   position: relative;
+  background-color: #fff;
 }
 #restaurants article div figure img {
   width: 100%;
@@ -396,6 +454,7 @@ header form button {
 #restaurants article div figure figcaption {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   margin-top: -10px;
   padding: 0px 10px 0px 10px;
@@ -661,12 +720,29 @@ footer .fas {
   }
 }
 @media (min-width: 768px) {
-  header button {
+  button {
     cursor: pointer;
   }
 
-  .btn1 {
-    cursor: pointer;
+  /*animation coeurs*/
+  .form-heart .btn-heart:hover .gradient {
+    color: transparent;
+  }
+  .form-heart .btn-heart:hover .nograd {
+    z-index: 1;
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transition: height 0.4s linear;
+    -moz-transition: height 0.4s linear;
+    transition: height 0.4s linear;
+    height: 50%;
+  }
+  .form-heart .btn-heart:not(:hover) .nograd {
+    -webkit-transition: height 0.4s linear;
+    -moz-transition: height 0.4s linear;
+    transition: height 0.4s linear;
+    height: 0%;
   }
 
   /*animation coches*/

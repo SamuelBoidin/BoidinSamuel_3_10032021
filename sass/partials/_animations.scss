@@ -5,6 +5,34 @@
         box-shadow: 0px 5px 10px 3px #c6c6c6;
     }
 }
+/*animation coeurs*/
+.form-heart {
+    .btn-heart {
+        &:active {
+            .gradient {
+                color: transparent;
+            }
+            .nograd {
+                visibility: visible;
+                background: -webkit-linear-gradient($primary, $secondary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -webkit-transition: height 0.4s linear;
+                -moz-transition: height 0.4s linear;
+                transition: height 0.4s linear;
+                height: 100px;
+            }
+        }
+        &:not(:active) {
+            .nograd {
+                -webkit-transition: height 0.4s linear;
+                -moz-transition: height 0.4s linear;
+                transition: height 0.4s linear;
+                height: 0;
+            }
+        }
+    }
+}
 /*animation coches*/
 .cards {
     article {
@@ -81,43 +109,21 @@
 }
 /*animation loader*/
 #loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    z-index: 1 ;
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient($secondary, $primary, $tertiary);
     animation: loading 3s ease-in forwards;
     -moz-animation: loading 3s ease-in forwards;
     -webkit-animation: loading 3s ease-in forwards;
     .loader-bars , .loader-bars:before , .loader-bars::after {
-        background: #fff;
         animation: grow 1s ease-in-out infinite;
         -moz-animation: grow 1s ease-in-out infinite;
         -webkit-animation: grow 1s ease-in-out infinite;
-        opacity: 0;
-        width: 10px;
-        height: 40px;
     }
     .loader-bars {
-        width: 10px;
-        height: 40px;
         animation-delay: .15s
     }
     .loader-bars:before {
-        content: '';
-        display: block;
-        position: absolute;
-        right: 15px;
         animation-delay: .25s
     }
     .loader-bars::after {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 15px;
         animation-delay: .45s
     }
 }

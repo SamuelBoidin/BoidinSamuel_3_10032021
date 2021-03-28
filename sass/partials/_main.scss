@@ -55,6 +55,32 @@ span {
     color: #fff;
     box-shadow: 0px 5px 12px 0px #c6c6c6;
 }
+.form-heart {
+    .btn-heart {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        border: transparent;
+        background-color: #fff;
+        .gradient {
+        background-color: #fff;
+        color: black;
+        z-index: 0;
+        }
+        .nograd {
+            visibility: hidden;
+            position: absolute;
+            color: #fff;
+            top: 10px;
+            width: 50%;
+            max-height: 0;
+        }
+    }
+}
 /*acceuil*/ 
 header {
     display: flex;
@@ -71,7 +97,39 @@ header {
             }
         }
     }
-
+/*section loader*/
+#loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2 ;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient($secondary, $primary, $tertiary);
+    .loader-bars , .loader-bars:before , .loader-bars::after {
+        background: #fff;
+        opacity: 0;
+        width: 10px;
+        height: 40px;
+    }
+    .loader-bars {
+        width: 10px;
+        height: 40px;
+    }
+    .loader-bars:before {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 15px;
+    }
+    .loader-bars::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 15px;
+    }
+}
 /*section localisation*/ 
 #location {
     width: 100%;
@@ -177,6 +235,7 @@ header {
                 border-radius: 15px;
                 box-shadow: 0 0 5px 0.2em #e2e2e2;
                 position: relative;
+                background-color: #fff;
                 img {
                     width: 100%;
                     height: 75%;
@@ -195,6 +254,7 @@ header {
                 figcaption {
                     display: flex;
                     flex-direction: row;
+                    align-items: center;
                     justify-content: space-between;
                     margin-top: -10px;
                     padding: 0px 10px 0px 10px;
