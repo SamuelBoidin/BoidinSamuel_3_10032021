@@ -217,13 +217,36 @@
     }
 }
 @media (min-width: 768px) /*hover-cursor laptop-l/desktop*/{
-    header {
-        button {
-            cursor: pointer;
-        }
-    }
-    .btn1 {
+    button {
         cursor: pointer;
+    }
+/*animation coeurs*/
+    .form-heart {
+        .btn-heart {
+            &:hover{
+                .gradient {
+                    color: transparent;
+                }
+                .nograd {
+                    z-index: 1;
+                    background: -webkit-linear-gradient($primary, $secondary);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-transition: height 0.4s linear;
+                    -moz-transition: height 0.4s linear;
+                    transition: height 0.4s linear;
+                    height: 50%;
+                }
+            }
+            &:not(:hover) {
+                .nograd {
+                    -webkit-transition: height 0.4s linear;
+                    -moz-transition: height 0.4s linear;
+                    transition: height 0.4s linear;
+                    height: 0%;
+                }    
+            }
+        }
     }
 /*animation coches*/
     .cards {
