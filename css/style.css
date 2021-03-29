@@ -1,27 +1,28 @@
 /*animation bouttons*/
 .btn1:hover {
   opacity: 0.8;
-  box-shadow: 0px 5px 10px 3px #c6c6c6;
+  box-shadow: 0px 5px 12px 3px #bababa;
 }
 
 /*animation coeurs*/
-.form-heart .btn-heart:active .gradient {
+.btn-heart:active .gradient {
   color: transparent;
+  z-index: -1;
 }
-.form-heart .btn-heart:active .nograd {
-  visibility: visible;
+.btn-heart:active .nograd {
+  z-index: 1;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-transition: height 0.4s linear;
-  -moz-transition: height 0.4s linear;
-  transition: height 0.4s linear;
-  height: 100px;
+  -webkit-transition: height 0.6s linear;
+  -moz-transition: height 0.6s linear;
+  transition: height 0.6s linear;
+  height: 100%;
 }
-.form-heart .btn-heart:not(:active) .nograd {
-  -webkit-transition: height 0.4s linear;
-  -moz-transition: height 0.4s linear;
-  transition: height 0.4s linear;
+.btn-heart:not(:active) .nograd {
+  -webkit-transition: height 0.6s linear;
+  -moz-transition: height 0.6s linear;
+  transition: height 0.6s linear;
   height: 0;
 }
 
@@ -253,7 +254,7 @@ span {
   box-shadow: 0px 5px 12px 0px #c6c6c6;
 }
 
-.form-heart .btn-heart {
+.btn-heart {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -263,18 +264,20 @@ span {
   border: transparent;
   background-color: #fff;
 }
-.form-heart .btn-heart .gradient {
-  background-color: #fff;
+.btn-heart .gradient {
+  background-color: transparent;
   color: black;
-  z-index: 0;
 }
-.form-heart .btn-heart .nograd {
-  visibility: hidden;
+.btn-heart .nograd {
+  z-index: -1;
   position: absolute;
-  color: #fff;
-  top: 10px;
+  top: 13px;
   width: 50%;
-  max-height: 0;
+  height: 0;
+}
+
+.btn-menu {
+  background-color: #f6f6f6;
 }
 
 /*acceuil*/
@@ -315,13 +318,11 @@ header form button {
 }
 #loader .loader-bars:before {
   content: "";
-  display: block;
   position: absolute;
   right: 15px;
 }
 #loader .loader-bars::after {
   content: "";
-  display: block;
   position: absolute;
   left: 15px;
 }
@@ -725,10 +726,10 @@ footer .fas {
   }
 
   /*animation coeurs*/
-  .form-heart .btn-heart:hover .gradient {
+  .btn-heart:hover .gradient {
     color: transparent;
   }
-  .form-heart .btn-heart:hover .nograd {
+  .btn-heart:hover .nograd {
     z-index: 1;
     background: -webkit-linear-gradient(#9356DC, #FF79DA);
     -webkit-background-clip: text;
@@ -738,7 +739,7 @@ footer .fas {
     transition: height 0.4s linear;
     height: 50%;
   }
-  .form-heart .btn-heart:not(:hover) .nograd {
+  .btn-heart:not(:hover) .nograd {
     -webkit-transition: height 0.4s linear;
     -moz-transition: height 0.4s linear;
     transition: height 0.4s linear;
