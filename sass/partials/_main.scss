@@ -55,31 +55,29 @@ span {
     color: #fff;
     box-shadow: 0px 5px 12px 0px #c6c6c6;
 }
-.form-heart {
-    .btn-heart {
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 40px;
-        height: 40px;
-        position: relative;
-        border: transparent;
-        background-color: #fff;
-        .gradient {
-        background-color: #fff;
-        color: black;
-        z-index: 0;
-        }
-        .nograd {
-            visibility: hidden;
-            position: absolute;
-            color: #fff;
-            top: 10px;
-            width: 50%;
-            max-height: 0;
-        }
+.btn-heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border: transparent;
+    background-color: #fff;
+    .gradient {
+    background-color: transparent;
+    color: black;
     }
+    .nograd {
+        z-index: -1;
+        position: absolute;
+        top: 13px;
+        width: 50%;
+        height: 0;
+    }
+}
+.btn-menu {
+    background-color: $lightgrey;
 }
 /*acceuil*/ 
 header {
@@ -119,13 +117,11 @@ header {
     }
     .loader-bars:before {
         content: '';
-        display: block;
         position: absolute;
         right: 15px;
     }
     .loader-bars::after {
         content: '';
-        display: block;
         position: absolute;
         left: 15px;
     }
@@ -308,7 +304,7 @@ footer {
             flex-direction: row;
             justify-content: space-around;
             align-items: baseline;
-        } 
+        }  
         .container {
             display: flex;
             flex-direction: column;
