@@ -17,18 +17,20 @@
             background: -webkit-linear-gradient($primary, $secondary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            -webkit-transition: height 0.6s linear;
-            -moz-transition: height 0.6s linear;
-            transition: height 0.6s linear;
-            height: 100%;
+            -ms-transform: scale(1);
+            transform: scale(1);  
+           -webkit-transform: scale(1);
         }
     }
     &:not(:active) {
         .nograd {
-            -webkit-transition: height 0.6s linear;
-            -moz-transition: height 0.6s linear;
-            transition: height 0.6s linear;
-            height: 0;
+            z-index: 1;
+            background: -webkit-linear-gradient($primary, $secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -ms-transform: scale(0);
+            transform: scale(0);  
+           -webkit-transform: scale(0);
         }
     }
 }

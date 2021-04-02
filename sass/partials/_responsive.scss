@@ -221,33 +221,34 @@
         cursor: pointer;
     }
 /*animation coeurs*/
-    
-        .btn-heart {
-            &:hover{
-                .gradient {
-                    color: transparent;
-                }
-                .nograd {
-                    z-index: 1;
-                    background: -webkit-linear-gradient($primary, $secondary);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    -webkit-transition: height 0.4s linear;
-                    -moz-transition: height 0.4s linear;
-                    transition: height 0.4s linear;
-                    height: 50%;
-                }
+    .btn-heart {
+        &:hover{
+            .gradient { 
+                color: transparent;
+                z-index: -1;
             }
-            &:not(:hover) {
-                .nograd {
-                    -webkit-transition: height 0.4s linear;
-                    -moz-transition: height 0.4s linear;
-                    transition: height 0.4s linear;
-                    height: 0%;
-                }    
+            .nograd {
+                z-index: 1;
+                background: -webkit-linear-gradient($primary, $secondary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -ms-transform: scale(1);
+                transform: scale(1);  
+               -webkit-transform: scale(1);
             }
         }
-    
+        &:not(:hover) {
+            .nograd {
+                z-index: 1;
+                background: -webkit-linear-gradient($primary, $secondary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -ms-transform: scale(0);
+                transform: scale(0);  
+               -webkit-transform: scale(0);
+            }
+        }
+    }
 /*animation coches*/
     .cards {
         article {
