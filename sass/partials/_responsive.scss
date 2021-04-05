@@ -232,20 +232,10 @@
                 background: -webkit-linear-gradient($primary, $secondary);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                -ms-transform: scale(1);
-                transform: scale(1);  
-               -webkit-transform: scale(1);
-            }
-        }
-        &:not(:hover) {
-            .nograd {
-                z-index: 1;
-                background: -webkit-linear-gradient($primary, $secondary);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                -ms-transform: scale(0);
-                transform: scale(0);  
-               -webkit-transform: scale(0);
+                -webkit-transition: height 0.9s linear;
+                -moz-transition: height 0.9s linear;
+                transition: height 0.9s linear;
+                height: 100%;
             }
         }
     }
