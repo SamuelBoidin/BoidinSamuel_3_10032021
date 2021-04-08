@@ -21,17 +21,18 @@
 }
 
 /*animation coches*/
-.cards article .container .tiles:active .check {
+.cards .divcontainer .container .tiles:active .check {
+  border: #99E2D0 1px solid;
   -webkit-transition: width 0.3s linear;
   -moz-transition: width 0.3s linear;
   transition: width 0.3s linear;
   width: 23%;
 }
-.cards article .container .tiles:active .check .fas {
+.cards .divcontainer .container .tiles:active .check .fas {
   transition: transform 0.3s linear;
   transform: rotate(360deg);
 }
-.cards article .container .tiles:not(:active) .check {
+.cards .divcontainer .container .tiles:not(:active) .check {
   -webkit-transition: width 0.3s linear;
   -moz-transition: width 0.3s linear;
   transition: width 0.3s linear;
@@ -203,7 +204,7 @@ h1 {
 
 h2 {
   font-size: 1.3em;
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 h3 {
@@ -221,7 +222,6 @@ a {
   text-decoration: none;
   color: black;
   outline: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 span {
@@ -234,6 +234,10 @@ span {
   padding-bottom: 5px;
   font-weight: normal;
   border-bottom: solid 3px #99E2D0;
+}
+
+.btn1, .btn-heart, a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .btn1 {
@@ -353,7 +357,7 @@ header form button {
 #location .locationfield label {
   margin-right: 10px;
 }
-#location article {
+#location div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -361,7 +365,7 @@ header form button {
   background-color: #f6f6f6;
   padding-bottom: 50px;
 }
-#location article p {
+#location div p {
   margin-top: -10px;
   padding-bottom: 20px;
   font-size: 1em;
@@ -369,64 +373,61 @@ header form button {
 
 /*section fonctionnement*/
 #operation {
-  margin-bottom: 50px;
-}
-#operation article {
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
 }
-#operation article h2 {
+#operation h2 {
   margin-bottom: 25px;
 }
-#operation article div {
+#operation div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#operation article div div {
+#operation div div {
   width: 85%;
   height: 60px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   background-color: #f6f6f6;
   border-radius: 20px;
   box-shadow: 0 3px 15px 2px #e2e2e2;
   margin-bottom: 20px;
 }
-#operation article div div .number {
+#operation div div .number {
   background-color: #9356DC;
   color: #fff;
   border-radius: 50%;
   padding: 2px 7px 2px 7px;
   margin-left: -10px;
 }
-#operation article div div .fas {
+#operation div div .fas {
   color: #7e7e7e;
 }
-#operation article div div p {
+#operation div div p {
   margin-right: 20px;
 }
-#operation article div .purple {
+#operation .purple {
   background-color: #f5EDFF;
 }
-#operation article div .purple .fas {
+#operation .purple .fas {
   color: #9356DC;
 }
 
 /*section restaurants*/
-#restaurants article {
-  display: flex;
-  flex-direction: column;
+#restaurants {
   background-color: #f6f6f6;
   padding-bottom: 40px;
   padding-top: 25px;
 }
-#restaurants article div {
+#restaurants div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#restaurants article div figure {
+#restaurants div figure {
   width: 90%;
   height: 235px;
   border-radius: 15px;
@@ -434,13 +435,13 @@ header form button {
   position: relative;
   background-color: #fff;
 }
-#restaurants article div figure img {
+#restaurants div figure img {
   width: 100%;
   height: 75%;
   object-fit: cover;
   border-radius: 15px 15px 0px 0px;
 }
-#restaurants article div figure .new {
+#restaurants div figure .new {
   background-color: #99E2D0;
   color: #008766;
   position: absolute;
@@ -449,7 +450,7 @@ header form button {
   right: 10px;
   padding: 3px 5px 3px 5px;
 }
-#restaurants article div figure figcaption {
+#restaurants div figure figcaption {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -490,28 +491,28 @@ footer .fas {
   height: 260px;
   margin-bottom: -60px;
 }
-.cards article {
+.cards .divcontainer {
   position: relative;
   z-index: 100;
   background-color: #f6f6f6;
   border-radius: 25px 25px 0px 0px;
   padding-bottom: 40px;
 }
-.cards article .titlemenu {
+.cards .divcontainer .titlemenu {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
-.cards article .container {
+.cards .divcontainer .container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.cards article .container .btn-order {
+.cards .divcontainer .container .btn-order {
   margin: 25px;
 }
-.cards article .container .tiles {
+.cards .divcontainer .container .tiles {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -524,7 +525,7 @@ footer .fas {
   margin-bottom: 20px;
   opacity: 0;
 }
-.cards article .container .tiles div {
+.cards .divcontainer .container .tiles div {
   width: 100%;
   display: flex;
   align-items: flex-end;
@@ -532,19 +533,19 @@ footer .fas {
   overflow: hidden;
   padding: 0px 15px 0px 15px;
 }
-.cards article .container .tiles div .name {
+.cards .divcontainer .container .tiles div .name {
   line-height: 20px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-.cards article .container .tiles div .price {
+.cards .divcontainer .container .tiles div .price {
   display: flex;
   justify-content: center;
   font-size: 0.9em;
   font-weight: bold;
 }
-.cards article .container .tiles .check {
+.cards .divcontainer .container .tiles .check {
   width: 0%;
   height: 100%;
   display: flex;
@@ -569,26 +570,25 @@ footer .fas {
     font-size: 1.1em;
   }
 
-  #operation article div {
+  #operation div {
     flex-direction: row;
     justify-content: space-around;
   }
-  #operation article div div {
+  #operation div div {
     width: 235px;
-    align-items: center;
     margin-bottom: 20px;
   }
 
-  #restaurants article div figure {
+  #restaurants div figure {
     width: 80%;
   }
 
-  .cards article .cardscontainer {
+  .cards .divcontainer .cardscontainer {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .cards article .cardscontainer .container .tiles {
+  .cards .divcontainer .cardscontainer .container .tiles {
     width: 550px;
   }
 
@@ -609,36 +609,36 @@ footer .fas {
     font-size: 1.1em;
   }
 
-  #operation article div {
+  #operation div {
     flex-direction: row;
     justify-content: space-around;
   }
-  #operation article div div {
+  #operation div div {
     width: 300px;
     align-items: center;
     margin-bottom: 20px;
   }
-  #operation article div div .number {
+  #operation div div .number {
     margin-left: -20px;
   }
 
-  #restaurants article div {
+  #restaurants div {
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
   }
-  #restaurants article div figure {
+  #restaurants div figure {
     height: 250px;
     width: 40%;
     margin-bottom: 30px;
   }
 
-  .cards article .cardscontainer {
+  .cards .divcontainer .cardscontainer {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .cards article .cardscontainer .container .tiles {
+  .cards .divcontainer .cardscontainer .container .tiles {
     width: 550px;
   }
 
@@ -679,36 +679,36 @@ footer .fas {
     font-size: 1.1em;
   }
 
-  #operation article div {
+  #operation div {
     flex-direction: row;
     justify-content: space-evenly;
   }
-  #operation article div div {
+  #operation div div {
     width: 400px;
     align-items: center;
     margin-bottom: 20px;
   }
-  #operation article div div .number {
+  #operation div div .number {
     margin-left: -48px;
   }
 
-  #restaurants article div {
+  #restaurants div {
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
   }
-  #restaurants article div figure {
+  #restaurants div figure {
     height: 280px;
     width: 40%;
     margin-bottom: 30px;
   }
 
-  .cards article .cardscontainer {
+  .cards .divcontainer .cardscontainer {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .cards article .cardscontainer .container .tiles {
+  .cards .divcontainer .cardscontainer .container .tiles {
     width: 650px;
   }
 
@@ -739,20 +739,21 @@ footer .fas {
   }
 
   /*animation coches*/
-  .cards article .container .tiles:hover {
+  .cards .divcontainer .container .tiles:hover {
     cursor: pointer;
   }
-  .cards article .container .tiles:hover .check {
+  .cards .divcontainer .container .tiles:hover .check {
+    border: #99E2D0 1px solid;
     -webkit-transition: width 0.3s linear;
     -moz-transition: width 0.3s linear;
     transition: width 0.3s linear;
     width: 23%;
   }
-  .cards article .container .tiles:hover .check .fas {
+  .cards .divcontainer .container .tiles:hover .check .fas {
     transition: transform 0.3s linear;
     transform: rotate(360deg);
   }
-  .cards article .container .tiles:not(:hover) .check {
+  .cards .divcontainer .container .tiles:not(:hover) .check {
     -webkit-transition: width 0.3s linear;
     -moz-transition: width 0.3s linear;
     transition: width 0.3s linear;

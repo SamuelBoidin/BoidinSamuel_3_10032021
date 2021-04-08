@@ -15,9 +15,9 @@
 </head>
 <body>
     <main>
-        <section id="loader">
+        <div id="loader">
             <div class="loader-bars"></div>
-        </section>
+        </div>
         <header>
             <img src="logo/ohmyfood@2x.svg" alt="Logo ohmyfood">
         </header>
@@ -27,98 +27,94 @@
                 <label for="city"><i class="fas fa-map-marker-alt"></i></label>
                 <input type="text" name="localisation" value="Paris, Belleville" id="city"/>
             </form>
-            <article>
+            <div>
                 <h1>Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
                 <form class="form-exploration" method="POST" action="#">
                 <button type="submit" class="btn1 btn-exploration" disabled>Explorer nos restaurants</button>
                 </form>
-            </article>
+            </div>
         </section>
 <!--section fonctionnement-->
         <section id="operation">
-            <article>
-                <h2>Fonctionnement</h2>
+            <h2>Fonctionnement</h2>
+            <div>
                 <div>
-                    <div>
-                        <p class="number">1</p>
-                        <p><i class="fas fa-mobile-alt fa-lg"></i></p>
-                        <p><span>Choisissez un restaurant</span></p>
-                    </div>
-                    <div>
-                        <p class="number">2</p>
-                        <p><i class="fas fa-list-ul"></i></p>
-                        <p><span>Composez votre menu</span></p>
-                    </div>
-                    <div class="purple">
-                        <p class="number">3</p>
-                        <p><i class="fas fa-store"></i></p>
-                        <p><span>Dégustez au restaurant</span></p>
-                    </div>
+                    <p class="number">1</p>
+                    <p><i class="fas fa-mobile-alt fa-lg"></i></p>
+                    <p><span>Choisissez un restaurant</span></p>
                 </div>
-            </article>
+                <div>
+                    <p class="number">2</p>
+                    <p><i class="fas fa-list-ul"></i></p>
+                    <p><span>Composez votre menu</span></p>
+                </div>
+                <div class="purple">
+                    <p class="number">3</p>
+                    <p><i class="fas fa-store"></i></p>
+                    <p><span>Dégustez au restaurant</span></p>
+                </div>
+            </div>
         </section>
 <!--section restaurants-->
         <section id="restaurants">
-            <article>
-                <h2>Restaurants</h2>
-                <div>
-                   <figure>
-                       <a href="menu_1.html">
-                           <p class="new"><span>Nouveau</span></p>
-                           <img src="images/la_palette_du_goût.jpg" alt="La palette du goût">
-                        </a>
-                       <figcaption>
-                            <p><span>La palette du goût</span><br />
-                            Ménilmontant</p>
-                            <button type="submit" class="btn-heart" disabled>
-                                <span class="gradient"><i class="far fa-heart fa-lg"></i></span>
-                                <span class="nograd"><i class="fas fa-heart fa-lg"></i></span>
-                            </button>
-                       </figcaption>
-                   </figure>
-                   <figure>
-                        <a href="menu_2.html">
-                            <p class="new"><span>Nouveau</span></p>
-                            <img src="images/la_note_enchantée.jpg" alt="La note enchantée">
-                        </a>
-                        <figcaption>
-                            <p><span>La note enchantée</span><br />
-                            Charonne</p>
-                            <button type="submit" class="btn-heart" disabled>
-                                <span class="gradient"><i class="far fa-heart fa-lg"></i></span>
-                                <span class="nograd"><i class="fas fa-heart fa-lg"></i></span>
-                            </button>  
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <a href="menu_3.html">
-                            <img src="images/à_la_française.jpg" alt="À la française">
-                        </a>
-                        <figcaption>
-                            <p><span>À la française</span><br />
-                            Cité Rouge</p>
-                            <button type="submit" class="btn-heart" disabled>
-                                <span class="gradient"><i class="far fa-heart fa-lg"></i></span>
-                                <span class="nograd"><i class="fas fa-heart fa-lg"></i></span>
-                            </button> 
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <a href="menu_4.html">
-                            <img src="images/le_délice_des_sens.jpg" alt="Le délice des sens">
-                        </a>
-                        <figcaption>
-                            <p><span>Le délice des sens</span><br />
-                            Folie-Méricourt</p>
-                            <button type="submit" class="btn-heart" disabled>
-                                <span class="gradient"><i class="far fa-heart fa-lg"></i></span>
-                                <span class="nograd"><i class="fas fa-heart fa-lg"></i></span>
-                            </button>    
-                        </figcaption>
-                    </figure>   
-                </div>
-            </article>
+            <h2>Restaurants</h2>
+            <div>
+                <figure>
+                    <a href="menu_1.html">
+                        <p class="new"><span>Nouveau</span></p>
+                        <img src="images/la_palette_du_goût.jpg" alt="La palette du goût">
+                    </a>
+                    <figcaption>
+                        <p><span>La palette du goût</span><br />
+                        Ménilmontant</p>
+                        <button type="submit" class="btn-heart" disabled>
+                            <span class="gradient"><i class="far fa-heart fa-lg"></i></span>
+                            <span class="nograd"><i class="fas fa-heart fa-lg"></i></span>
+                        </button>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <a href="menu_2.html">
+                        <p class="new"><span>Nouveau</span></p>
+                        <img src="images/la_note_enchantée.jpg" alt="La note enchantée">
+                    </a>
+                    <figcaption>
+                        <p><span>La note enchantée</span><br />
+                        Charonne</p>
+                        <button type="submit" class="btn-heart" disabled>
+                            <span class="gradient"><i class="far fa-heart fa-lg"></i></span>
+                            <span class="nograd"><i class="fas fa-heart fa-lg"></i></span>
+                        </button>  
+                    </figcaption>
+                </figure>
+                <figure>
+                    <a href="menu_3.html">
+                        <img src="images/à_la_française.jpg" alt="À la française">
+                    </a>
+                    <figcaption>
+                        <p><span>À la française</span><br />
+                        Cité Rouge</p>
+                        <button type="submit" class="btn-heart" disabled>
+                            <span class="gradient"><i class="far fa-heart fa-lg"></i></span>
+                            <span class="nograd"><i class="fas fa-heart fa-lg"></i></span>
+                        </button> 
+                    </figcaption>
+                </figure>
+                <figure>
+                    <a href="menu_4.html">
+                        <img src="images/le_délice_des_sens.jpg" alt="Le délice des sens">
+                    </a>
+                    <figcaption>
+                        <p><span>Le délice des sens</span><br />
+                        Folie-Méricourt</p>
+                        <button type="submit" class="btn-heart" disabled>
+                            <span class="gradient"><i class="far fa-heart fa-lg"></i></span>
+                            <span class="nograd"><i class="fas fa-heart fa-lg"></i></span>
+                        </button>    
+                     </figcaption>
+                </figure>   
+            </div>
         </section>
     </main>
 <!--footer acceuil et menu-->

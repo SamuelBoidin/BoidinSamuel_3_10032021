@@ -16,30 +16,25 @@
             }
         }
     }
-    #operation {
-        article {
+    #operation {       
+        div {
+            flex-direction: row;
+            justify-content: space-around;
             div {
-                flex-direction: row;
-                justify-content: space-around;
-                div {
-                    width: 235px;
-                    align-items: center;
-                    margin-bottom: 20px;
-                }
-            }
-        }
-    } 
-    #restaurants {
-        article {
-            div {
-                figure {
-                    width: 80%;
-                }
+                width: 235px;
+                margin-bottom: 20px;
             }
         }
     }
+    #restaurants {
+        div {
+            figure {
+                width: 80%;
+            }
+        }   
+    }
     .cards {
-        article {
+        .divcontainer {
             .cardscontainer {
                 display: flex;
                 flex-direction: column;
@@ -77,37 +72,33 @@
         }
     }
     #operation {
-        article {
+        div {
+            flex-direction: row;
+            justify-content: space-around;
             div {
-                flex-direction: row;
-                justify-content: space-around;
-                div {
-                    width: 300px;
-                    align-items: center;
-                    margin-bottom: 20px;
-                    .number {
-                        margin-left: -20px;
-                    }
+                width: 300px;
+                align-items: center;
+                margin-bottom: 20px;
+                .number {
+                    margin-left: -20px;
                 }
             }
-        }
+        } 
     }
-    #restaurants {
-        article {
-            div {
-                flex-direction: row;
-                justify-content: space-evenly;
-                flex-wrap: wrap;
-                figure {
-                    height: 250px;
-                    width: 40%;
-                    margin-bottom: 30px;
-                }
+    #restaurants {  
+        div {
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            figure {
+                height: 250px;
+                width: 40%;
+                margin-bottom: 30px;
             }
         }
     }
     .cards {
-        article {
+        .divcontainer {
             .cardscontainer {
                 display: flex;
                 flex-direction: column;
@@ -165,37 +156,33 @@
         }
     }
     #operation {
-        article {
+        div {
+            flex-direction: row;
+            justify-content: space-evenly;
             div {
-                flex-direction: row;
-                justify-content: space-evenly;
-                div {
-                    width: 400px;
-                    align-items: center;
-                    margin-bottom: 20px;
-                    .number {
-                        margin-left: -48px;
-                    }
+                width: 400px;
+                align-items: center;
+                margin-bottom: 20px;
+                .number {
+                     margin-left: -48px;
                 }
             }
-        }   
+        }    
     }
     #restaurants {
-        article {
-            div {
-                flex-direction: row;
-                justify-content: space-evenly;
-                flex-wrap: wrap;
-                figure {
-                    height: 280px;
-                    width: 40%;
-                    margin-bottom: 30px;
-                }
+        div {
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            figure {
+                height: 280px;
+                width: 40%;
+                margin-bottom: 30px;
             }
-        }
+        }  
     }
     .cards {
-        article {
+        .divcontainer {
             .cardscontainer {
                 display: flex;
                 flex-direction: column;
@@ -241,12 +228,13 @@
     }
 /*animation coches*/
     .cards {
-        article {
+        .divcontainer {
             .container {
                 .tiles {
                     &:hover {
                         cursor: pointer;
                         .check {
+                        border: $tertiary 1px solid;
                         -webkit-transition: width 0.3s linear;
                         -moz-transition: width 0.3s linear;
                         transition: width 0.3s linear;
